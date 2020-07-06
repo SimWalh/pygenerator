@@ -27,29 +27,23 @@ def main():
         matrix = [[random.randint(1, 2) for i in range(listsizeW)]
                   for i in range(listsizeH)]
 
-        startall = time.time()
+        matrix = generaterooms(matrix)
         for i in range(5):
-            start = time.time()
             matrix = doCellularAutomation(matrix)
-            end = time.time()
-            print("Pass", i + 1, "took", round(end - start, 5), "sec")
-        endall = time.time()
-        print("Passes took", round(endall - startall, 5), "sec combined")
-        startdraw = time.time()
         drawcanvas(matrix, cellsWindow)
         update()
-        enddraw = time.time()
-        print("Drawing was", round(enddraw - startdraw, 5), "sec combined")
-        print("Done")
 
         try:
             cellsWindow.getMouse()  # Pause to view result
         except GraphicsError:
-            pass
+            pass                    # ignore if window already closed
             break
 
     cellsWindow.close()  # Close window when done
 
+def generaterooms(mat)
+    # this is a test for git, now generation of mazes is done
+    return mat
 
 def drawcanvas(mat, win):
     # iterate over all elements of the matrix
