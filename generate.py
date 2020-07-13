@@ -8,6 +8,7 @@ import re
 states = {"alive forever":0, "alive":1, "dead":2, "dead forever":3}
 color_list = {0:"white", 1:"gray75", 2:"gray10", 3:"black", -1:"red"}
 
+#test for testcommit
 
 def generaterooms(dest_mat, n_rooms_horiz, n_rooms_vertic, chance_percent):
     """
